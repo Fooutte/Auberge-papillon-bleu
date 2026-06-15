@@ -27,19 +27,14 @@ export default function AubergePapillon() {
   return (
     <div className="min-h-screen bg-[#0A1128] text-white flex flex-col items-center justify-center font-sans overflow-hidden relative">
       
-      {/* ========================================== */}
-      {/* 🎬 SECTION 1 : LA CINÉMATIQUE D'INTRO       */}
-      {/* ========================================== */}
+      {/* 🎬 SECTION 1 : LA CINÉMATIQUE D'INTRO */}
       {step < 4 && (
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#0A1128] z-50 transition-opacity duration-1000">
           
           {/* Les Personnages Bleus (Étape 1) */}
           <div className={`transition-all duration-1000 transform ${step >= 1 ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
             <div className="relative w-64 h-64 flex items-center justify-center">
-              {/* Cercle d'énergie Vert Lime simulé autour des personnages */}
               <div className={`absolute inset-0 border-4 border-[#76DE19] rounded-full animate-spin [animation-duration:8s] ${step >= 1 ? 'opacity-40' : 'opacity-0'}`}></div>
-              
-              {/* Texte temporaire ou placeholder si tu n'as pas découpé les petits bonhommes */}
               <span className="text-sm text-[#3A9EFC] font-semibold tracking-widest uppercase">L'Expérience Humaine</span>
             </div>
           </div>
@@ -63,9 +58,7 @@ export default function AubergePapillon() {
         </div>
       )}
 
-      {/* ========================================== */}
-      {/* 🌐 SECTION 2 : LE SITE VITRINE ÉPURÉ       */}
-      {/* ========================================== */}
+      {/* 🌐 SECTION 2 : LE SITE VITRINE ÉPURÉ */}
       <main className={`w-full max-w-4xl px-6 flex flex-col items-center text-center transition-all duration-1000 ${step === 4 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         
         {/* Le Logo Complet Stabilisé */}
@@ -73,7 +66,7 @@ export default function AubergePapillon() {
           <img src="/logo-complet.png" alt="Auberge du Papillon Bleu" className="w-full h-auto" />
         </div>
 
-        {/* Le Titre Blanc Épuré qui percute */}
+        {/* Le Titre Blanc Épuré */}
         <h1 className="text-4xl md:text-6xl font-light tracking-[0.2em] uppercase text-white mb-4">
           Auberge
         </h1>
@@ -110,5 +103,3 @@ export default function AubergePapillon() {
     </div>
   );
 }
-
-// Force build
